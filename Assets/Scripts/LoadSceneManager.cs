@@ -5,16 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneManager : MonoBehaviour
 {
-
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    
-
       public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
@@ -38,7 +28,7 @@ public class LoadSceneManager : MonoBehaviour
       
     public void Exit()
     {
-        Debug.Log("Приложение закрыта");
+        Debug.Log("Приложение закрыто");
         Application.Quit();
     }
 
