@@ -25,6 +25,10 @@ public class LoadSceneManager : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+     public void LoadSavwScenesMenu()
+    {
+        SceneManager.LoadScene(5);
+    }
       
     public void Exit()
     {
