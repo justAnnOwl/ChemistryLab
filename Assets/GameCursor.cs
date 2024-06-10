@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class GameCursor : MonoBehaviour
 {
@@ -12,11 +13,11 @@ public class GameCursor : MonoBehaviour
 	public ProjectMode mode = ProjectMode.Project3D;
 	private Vector2 offset;
 	private Texture2D cursor;
-	private bool adviceMode;
+	private bool adviceMode = false;
 
 	void Awake()
 	{
-		adviceMode= false;
+	//	adviceMode= false;
 		Cursor.visible = false; // скрываем системный курсор
 								//if(mode == ProjectMode.Project2D) Camera.main.orthographic = true; // для RaycastHit2D, камера должна быть в ортогональном режиме
 	}
@@ -26,8 +27,9 @@ public class GameCursor : MonoBehaviour
 AdviceActivity adviceActivity = new AdviceActivity();
 		if (tags == "Button" || tags == "GameObject" || tags == "Tube")
 		{
-			if (adviceActivity.isAdviceModeActive == true)
+			if (adviceMode == true)
 			{
+				Console.WriteLine("ADVICE");
 				cursor = cursorAdvice;
 			}
 			else cursor = cursorButton;

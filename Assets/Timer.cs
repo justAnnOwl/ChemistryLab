@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject gameObject;
+    float timeInSec=60;
     void Start()
     {
-        StartCoroutine("ExecuteAfterTime");
+        StartCoroutine("ExecuteAfterTime", timeInSec);
     }
 
     
     IEnumerator ExecuteAfterTime(float timeInSec)
     {
         yield return new WaitForSeconds(timeInSec);
-        //сделать нужное
+        gameObject.SetActive(true);
     }
 }
