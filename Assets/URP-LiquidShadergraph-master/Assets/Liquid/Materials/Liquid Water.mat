@@ -162,7 +162,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - Color_17C6C3C7: {r: 0.74056596, g: 0.8779134, b: 1, a: 0.5882353}
+    - Color_17C6C3C7: {r: 0.74056596, g: 0.8779134, b: 1, a: 0.49019608}
     - Color_FB35205B: {r: 0.8830189, g: 0.928597, b: 0.9811321, a: 0.6666667}
     - _BASE_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}

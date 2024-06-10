@@ -18,7 +18,6 @@ public class AdviceActivity : MonoBehaviour
 
     public static void SetAdviceText(string objectName)
     {
-
         switch (objectName)
         {
             case "H2SO4Flask": instance.adviceText.text= "Серная кислота (H2SO4) обладает характерными свойствами кислот и является сильным окислителем. Это наиболее активная неорганическая кислота с температурой плавления 10°C. Кислота закипает при 296°C с выделением воды и оксида серы SO3. Способна поглощать пары воды, поэтому её используют для осушения газов.";
