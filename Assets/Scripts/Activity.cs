@@ -1,26 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Activity : MonoBehaviour
 {
-       
+    public GameObject gameObject;
 
-    
-       public GameObject gameObject; 
-     
-            
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        gameObject.SetActive(false);
+    }
 
-   
-        
-       gameObject.SetActive(false);
-       }
-             
-      
-    
+
+
 
 /*void setActive(){
     if(counter<count){
