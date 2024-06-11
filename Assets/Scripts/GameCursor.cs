@@ -23,7 +23,7 @@ public class GameCursor : MonoBehaviour
 
 	private void MainCursor(string tags)
 	{
-		var adviceActivity = gameObject.AddComponent<AdviceActivity>();
+		// var adviceActivity = gameObject.AddComponent<AdviceActivity>();
 		if (tags is "Button" or "GameObject" or "Tube")
 		{
 			if (_adviceMode == true)

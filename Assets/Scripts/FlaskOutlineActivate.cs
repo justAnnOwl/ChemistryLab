@@ -2,44 +2,50 @@ using UnityEngine;
 
 public class FlaskOutlineActivate : MonoBehaviour
 {// DB0009
+    // public GameObject tempGameObject;
+
     public static Outline lastObjectOutline;
-    public GameObject tempGameObject;
     //  private static GameObject lastOutlineObject;
 
+    private Outline _outline;
+    
     private void Awake()
     {
-      lastObjectOutline = tempGameObject.GetComponent<Outline>();
-      lastObjectOutline.enabled = false;
+         // lastObjectOutline = tempGameObject.GetComponent<Outline>();
+         // lastObjectOutline.enabled = false;
+
+         _outline = GetComponent<Outline>();
     }
     
     private void OnCollisionEnter(Collision collision)
     {
+        Color color;
+
         if (collision.gameObject.CompareTag("Tube"))
-        {
-             lastObjectOutline = collision.gameObject.GetComponent<Outline>();
-             lastObjectOutline.enabled = true;
-             lastObjectOutline.OutlineColor = Color.green;
-
-             var thisOutline = this.GetComponent<Outline>();
-             thisOutline.enabled = true;
-             thisOutline.OutlineColor = Color.green;
-        }
+            color = Color.green;
         else if (collision.gameObject.CompareTag("GameObject"))
-        {
-             lastObjectOutline = collision.gameObject.GetComponent<Outline>();
-             lastObjectOutline.enabled = true;
-             lastObjectOutline.OutlineColor = Color.red;
+            color = Color.red;
+        else
+            return;
 
-             var thisOutline = GetComponent<Outline>();
-             thisOutline.enabled = true;
-             thisOutline.OutlineColor = Color.red;
-        }
-  }
+        lastObjectOutline = collision.gameObject.GetComponent<Outline>();
+        lastObjectOutline.enabled = true;
+        lastObjectOutline.OutlineColor = color;
 
-    private void OnCollisionExit(Collision collision)
+        EnableOutline(color);
+    }
+
+    private void EnableOutline(Color color)
     {
-        var thisOutline = GetComponent<Outline>();
-        thisOutline.enabled = false;
-        lastObjectOutline.enabled = false;
+        _outline.enabled = true;
+        _outline.OutlineColor = color;
+    }
+
+    private void OnCollisionExit(Collision _)
+    {
+        _outline.enabled = false;
+
+        if (lastObjectOutline != null)
+            lastObjectOutline.enabled = false;
     }
 }

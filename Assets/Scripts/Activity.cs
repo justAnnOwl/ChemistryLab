@@ -9,9 +9,6 @@ public class Activity : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-
-
-
 /*void setActive(){
     if(counter<count){
    // gameObject.SetActive(true);
