@@ -1,16 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
     public GameObject gameObject;
-    float timeInSec=60;
-    void Start()
-    {
-        StartCoroutine("ExecuteAfterTime", timeInSec);
-    }
+    private const float TimeInSec = 60;
 
+    private void Start()
+    {
+        StartCoroutine(nameof(ExecuteAfterTime), TimeInSec);
+    }
     
     IEnumerator ExecuteAfterTime(float timeInSec)
     {

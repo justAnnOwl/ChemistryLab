@@ -6643,11 +6643,11 @@
     "m_ActiveSubTarget": {
         "m_Id": "fa882361a49c48b7add5d560c92a78f3"
     },
-    "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 0,
+    "m_AllowMaterialOverride": true,
+    "m_SurfaceType": 1,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
-    "m_AlphaMode": 0,
+    "m_AlphaMode": 3,
     "m_RenderFace": 0,
     "m_AlphaClip": true,
     "m_CastShadows": true,
@@ -9167,10 +9167,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 6315.0,
-            "y": 162.99998474121095,
+            "x": 6315.00048828125,
+            "y": 163.00003051757813,
             "width": 208.0,
-            "height": 359.9999694824219
+            "height": 360.5000915527344
         }
     },
     "m_Slots": [

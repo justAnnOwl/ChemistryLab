@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Activity : MonoBehaviour
+public class InstructionWindow : MonoBehaviour
 {
-    public GameObject gameObject;
+    public GameObject gameObject; 
 
     private void Start()
     {
