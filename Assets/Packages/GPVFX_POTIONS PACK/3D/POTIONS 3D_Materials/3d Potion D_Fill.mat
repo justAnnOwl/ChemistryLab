@@ -9,14 +9,19 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 3d Potion D_Fill
   m_Shader: {fileID: -6465566751694194690, guid: 7ec2ebf031f468644ae9843da25282fd, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords:
+  - _ALPHAMODULATE_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DepthOnly
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -73,13 +78,17 @@ Material:
     - Boolean_7937B813: 1
     - Vector1_4296D34C: -0.1
     - Vector1_817FF511: 100
-    - Vector1_AB3A3EBC: 1
-    - Vector1_ACE54085: 100
-    - Vector1_B30B07BF: 0.1
-    - Vector1_D45DB484: 0
+    - Vector1_AB3A3EBC: 1.245
+    - Vector1_ACE54085: 2
+    - Vector1_B30B07BF: 0.146
+    - Vector1_D45DB484: -0.17
     - Vector1_F2BB55D7: 1
     - Vector1_F51841FD: 10
+    - _AlphaClip: 1
+    - _Blend: 3
     - _BumpScale: 1
+    - _CastShadows: 1
+    - _Cull: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -94,15 +103,18 @@ Material:
     - _QueueOffset: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 2
+    - _Surface: 1
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
     m_Colors:
     - Color_17C6C3C7: {r: 1, g: 1, b: 1, a: 0}
-    - Color_FB35205B: {r: 0.40094337, g: 0.6140097, b: 1, a: 0}
+    - Color_FB35205B: {r: 0, g: 0.39473677, b: 1, a: 0}
     - _Color: {r: 1, g: 0.9724138, b: 0, a: 1}
     - _EmissionColor: {r: 1, g: 0.93103445, b: 0, a: 1}
-    - _Speed: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Speed: {r: 0.5, g: 46.6, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7642228765892774417
 MonoBehaviour:
